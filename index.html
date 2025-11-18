@@ -124,6 +124,8 @@
             class="text-text-light/50 hover:text-primary transition-colors duration-300"
             data-alt="GitHub Profile"
             href="https://github.com/KNVSDIWAKAR"
+            target="_blank"
+            rel="noreferrer"
           >
             <svg
               aria-hidden="true"
@@ -142,6 +144,8 @@
             class="text-text-light/50 hover:text-primary transition-colors duration-300"
             data-alt="LinkedIn Profile"
             href="https://www.linkedin.com/in/diwakar-kancherla-3a831621a"
+            target="_blank"
+            rel="noreferrer"
           >
             <svg
               aria-hidden="true"
@@ -181,7 +185,9 @@
                   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR1VhUnoUPNcStlSvXU-27acaNdVpmBDv9PkTbwOtlPIY_1mNPdWlE60tTGpr01ZoS2QDAA71dD8vV4LxG8lEGOg74miLVtuyF0WiYV0RCv40-IHnCE7v93CbjF761n57jgfKYdpfIv86fGl8ag2LVV00BSZB3imMx93tQopiSbPUuDwn_o7TB588iuRhOFttItWquaVzO0bnoNgc9HerlPxF4hSYc95CXXWxjBQXU0d3_od4Mymh0JprsVijTdxMH46r_8SaM0HY');
                 "
               ></div>
-              <div class="text-sm font-medium text-text-light">Diwakar K.</div>
+              <div class="text-sm font-medium text-text-light">
+                Diwakar Kancherla
+              </div>
             </a>
           </div>
           <nav class="flex items-center gap-3">
@@ -195,8 +201,41 @@
               href="#resume"
               >Resume</a
             >
-            <a href="#contact" class="p-2 rounded-md hover:text-primary">
-              <span class="material-symbols-outlined">mail</span>
+            <a
+              href="https://github.com/KNVSDIWAKAR"
+              class="p-2 rounded-md hover:text-primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/diwakar-kancherla-3a831621a"
+              class="p-2 rounded-md hover:text-primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                ></path>
+              </svg>
             </a>
           </nav>
         </div>
@@ -425,6 +464,17 @@
                   </ul>
                 </div>
               </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <a
+                id="downloadResume"
+                href="https://drive.google.com/file/d/1VR33WNybSkzMKeKGmSqo1s1TZpeVTx1d/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-block bg-primary text-background-dark font-bold text-sm px-6 py-3 rounded-lg hover:shadow-glow-gold"
+                >Download Resume</a
+              >
             </div>
           </div>
         </section>
@@ -849,14 +899,12 @@
         });
         setActiveLink(inView ? inView.id : "about");
       });
-
       navLinks.forEach((a) =>
         a.addEventListener("click", (e) => {
           const id = a.getAttribute("href").slice(1);
           setActiveLink(id);
         })
       );
-
       const mobileBtn = document.getElementById("mobileMenuBtn");
       const mobileMenu = document.getElementById("mobileMenu");
       function toggleMobileMenu() {
