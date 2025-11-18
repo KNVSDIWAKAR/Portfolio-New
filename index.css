@@ -1,0 +1,32 @@
+/* index.css — keeps your custom rules and small helpers */
+
+/* base smoothing */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* small util for the profile image (you already used inline style originally) */
+#profile-image {
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCR1VhUnoUPNcStlSvXU-27acaNdVpmBDv9PkTbwOtlPIY_1mNPdWlE60tTGpr01ZoS2QDAA71dD8vV4LxG8lEGOg74miLVtuyF0WiYV0RCv40-IHnCE7v93CbjF761n57jgfKYdpfIv86fGl8ag2LVV00BSZB3imMx93tQopiSbPUuDwn_o7TB588iuRhOFttItWquaVzO0bnoNgc9HerlPxF4hSYc95CXXWxjBQXU0d3_od4Mymh0JprsVijTdxMH46r_8SaM0HY");
+  background-position: center;
+  background-size: cover;
+  width: 112px; /* size-28 equivalent */
+  height: 112px;
+}
+
+/* small class preserved from original style tag */
+.tag {
+  @apply text-xs font-medium bg-primary/80 text-background-dark px-2.5 py-1 rounded-full;
+}
+
+/* Safari/older Chromium fixes: make scrollbar visible and consistent */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Optional: keep focus outlines accessible */
+:focus {
+  outline: 3px solid rgba(212, 175, 55, 0.18);
+  outline-offset: 2px;
+}

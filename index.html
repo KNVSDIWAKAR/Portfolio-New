@@ -4,72 +4,53 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Diwakar Kancherla - Full Stack Developer</title>
-
-    <!-- Tailwind CONFIG MUST COME FIRST -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <script>
-      window.tailwind = {
-        config: {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                primary: "#D4AF37",
-                "background-dark": "#121212",
-                "text-light": "#F5F5F5",
-              },
-              fontFamily: {
-                display: ["Playfair Display", "serif"],
-                sans: ["Inter", "sans-serif"],
-              },
-              borderRadius: {
-                DEFAULT: "0.5rem",
-                lg: "1rem",
-                xl: "1.5rem",
-                full: "9999px",
-              },
-              boxShadow: {
-                "glow-gold": "0 0 15px 5px rgba(212,175,55,0.3)",
-                "inset-gold": "inset 0 4px 10px 0 rgba(212,175,55,0.15)",
-              },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37",
+              "background-dark": "#121212",
+              "text-light": "#F5F5F5",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+            boxShadow: {
+              "glow-gold": "0 0 15px 5px rgba(212, 175, 55, 0.3)",
+              "inset-gold": "inset 0 4px 10px 0 rgba(212, 175, 55, 0.15)",
             },
           },
         },
       };
     </script>
-
-    <!-- Tailwind CDN AFTER CONFIG -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-
     <style>
       body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-
-      /* REPLACE @apply (Tailwind CDN cannot compile @apply) */
-      .tag {
-        font-size: 0.75rem; /* text-xs */
-        font-weight: 500; /* font-medium */
-        background-color: rgba(212, 175, 55, 0.8); /* primary/80 */
-        color: #121212; /* text-background-dark */
-        padding: 0.25rem 0.625rem; /* px-2.5 py-1 */
-        border-radius: 9999px; /* rounded-full */
-      }
     </style>
   </head>
-
   <body class="bg-background-dark font-sans text-text-light/80">
     <div class="relative flex min-h-screen w-full flex-col lg:flex-row">
       <aside
@@ -537,11 +518,11 @@
             </a>
           </div>
         </section>
-        <!-- <style>
+        <style>
           .tag {
             @apply text-xs font-medium bg-primary/80 text-background-dark px-2.5 py-1 rounded-full;
           }
-        </style> -->
+        </style>
         <section id="case-studies" class="py-10">
           <h2
             class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
