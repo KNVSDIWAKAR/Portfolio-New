@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Diwakar Kancherla - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D4AF37",
+              "background-dark": "#121212",
+              "text-light": "#F5F5F5",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+            boxShadow: {
+              "glow-gold": "0 0 15px 5px rgba(212, 175, 55, 0.3)",
+              "inset-gold": "inset 0 4px 10px 0 rgba(212, 175, 55, 0.15)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body class="bg-background-dark font-sans text-text-light/80">
+    <div class="relative flex min-h-screen w-full flex-col lg:flex-row">
+      <aside
+        class="w-full lg:w-[320px] lg:flex-shrink-0 lg:h-screen lg:sticky lg:top-0 p-8 flex flex-col border-b lg:border-b-0 lg:border-r border-primary/20"
+      >
+        <div class="flex flex-col items-center text-center gap-4 flex-grow">
+          <div
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-28 border-2 border-primary/50"
+            data-alt="Portrait of Diwakar Kancherla"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR1VhUnoUPNcStlSvXU-27acaNdVpmBDv9PkTbwOtlPIY_1mNPdWlE60tTGpr01ZoS2QDAA71dD8vV4LxG8lEGOg74miLVtuyF0WiYV0RCv40-IHnCE7v93CbjF761n57jgfKYdpfIv86fGl8ag2LVV00BSZB3imMx93tQopiSbPUuDwn_o7TB588iuRhOFttItWquaVzO0bnoNgc9HerlPxF4hSYc95CXXWxjBQXU0d3_od4Mymh0JprsVijTdxMH46r_8SaM0HY');
+            "
+          ></div>
+          <div class="flex flex-col">
+            <h1
+              class="text-text-light text-2xl font-display font-bold relative inline-block pb-2"
+            >
+              Diwakar Kancherla
+              <span
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-0.5 bg-primary"
+              ></span>
+            </h1>
+            <p
+              class="text-text-light/60 text-sm font-medium leading-normal mt-2"
+            >
+              Full Stack Developer
+            </p>
+          </div>
+          <nav class="flex flex-col gap-2 mt-8 w-full">
+            <a
+              class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-primary/10 text-primary transition-colors duration-300 hover:bg-primary/20"
+              href="#about"
+            >
+              <span class="material-symbols-outlined text-xl">person</span>
+              <p class="text-sm font-medium leading-normal">About</p>
+            </a>
+            <a
+              class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-text-light/70 transition-colors duration-300 hover:bg-primary/20 hover:text-primary"
+              href="#resume"
+            >
+              <span class="material-symbols-outlined text-xl"
+                >business_center</span
+              >
+              <p class="text-sm font-medium leading-normal">Resume</p>
+            </a>
+            <a
+              class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-text-light/70 transition-colors duration-300 hover:bg-primary/20 hover:text-primary"
+              href="#projects"
+            >
+              <span class="material-symbols-outlined text-xl">grid_view</span>
+              <p class="text-sm font-medium leading-normal">Projects</p>
+            </a>
+            <a
+              class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-text-light/70 transition-colors duration-300 hover:bg-primary/20 hover:text-primary"
+              href="#case-studies"
+            >
+              <span class="material-symbols-outlined text-xl">article</span>
+              <p class="text-sm font-medium leading-normal">Case Studies</p>
+            </a>
+            <a
+              class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-text-light/70 transition-colors duration-300 hover:bg-primary/20 hover:text-primary"
+              href="#contact"
+            >
+              <span class="material-symbols-outlined text-xl">mail</span>
+              <p class="text-sm font-medium leading-normal">Contact</p>
+            </a>
+          </nav>
+        </div>
+        <div class="flex justify-center items-center gap-5 pt-8 mt-auto">
+          <a
+            class="text-text-light/50 hover:text-primary transition-colors duration-300"
+            data-alt="GitHub Profile"
+            href="https://github.com/KNVSDIWAKAR"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-6 w-6"
+              fill="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="text-text-light/50 hover:text-primary transition-colors duration-300"
+            data-alt="LinkedIn Profile"
+            href="https://www.linkedin.com/in/diwakar-kancherla-3a831621a"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-6 w-6"
+              fill="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </aside>
+      <main class="flex-1 p-8 sm:p-12 lg:p-20 space-y-20 lg:space-y-28">
+        <section id="about">
+          <h2
+            class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
+          >
+            About Me
+          </h2>
+          <hr class="border-primary/20 my-6" />
+          <p
+            class="text-text-light text-base sm:text-lg font-normal leading-relaxed max-w-3xl"
+          >
+            A dedicated Full Stack Developer currently working at Firstsource as
+            an Associate Software Developer. I craft high-performing,
+            user-focused web applications by blending clean architecture with
+            modern frameworks. Passionate about turning ideas into scalable
+            solutions, I continuously explore new technologies to build products
+            that are efficient, elegant, and impactful.
+          </p>
+        </section>
+        <section id="resume">
+          <h2
+            class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
+          >
+            Resume
+          </h2>
+          <hr class="border-primary/20 my-6" />
+          <div class="space-y-8">
+            <div class="grid grid-cols-[auto_1fr] gap-x-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >rocket_launch</span
+                  >
+                </div>
+                <div class="w-px bg-primary/20 grow"></div>
+              </div>
+              <div class="pb-8">
+                <div
+                  class="p-6 bg-background-dark border border-primary/20 rounded-lg shadow-inset-gold"
+                >
+                  <p class="text-text-light text-lg font-medium leading-normal">
+                    Associate Software Developer, Firstsource
+                  </p>
+                  <p
+                    class="text-text-light/60 text-base font-normal leading-normal mt-1"
+                  >
+                    July 2025 – Present
+                  </p>
+                  <ul
+                    class="list-disc list-inside text-text-light/80 text-base leading-relaxed mt-3 space-y-2"
+                  >
+                    <li>
+                      Developing full-stack web applications with a focus on
+                      scalability and modular architecture.
+                    </li>
+                    <li>
+                      Implementing interactive dashboards and workflow
+                      automation tools to improve efficiency.
+                    </li>
+                    <li>
+                      Enhancing UI/UX components with modern frontend frameworks
+                      and performance optimization.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >work</span
+                  >
+                </div>
+                <div class="w-px bg-primary/20 grow"></div>
+              </div>
+              <div class="pb-8">
+                <div
+                  class="p-6 bg-background-dark border border-primary/20 rounded-lg shadow-inset-gold"
+                >
+                  <p class="text-text-light text-lg font-medium leading-normal">
+                    Freelance Developer, ITC Limited
+                  </p>
+                  <p
+                    class="text-text-light/60 text-base font-normal leading-normal mt-1"
+                  >
+                    January 2025 – June 2025
+                  </p>
+                  <ul
+                    class="list-disc list-inside text-text-light/80 text-base leading-relaxed mt-3 space-y-2"
+                  >
+                    <li>
+                      Designed and developed retail mapping and outlet
+                      assignment dashboards using MERN stack.
+                    </li>
+                    <li>
+                      Integrated OpenStreetMap APIs for geospatial visualization
+                      and dynamic grid coverage.
+                    </li>
+                    <li>
+                      Optimized gray-area detection algorithms and automated
+                      reporting pipelines.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >code</span
+                  >
+                </div>
+                <div class="w-px bg-primary/20 grow"></div>
+              </div>
+              <div class="pb-8">
+                <div
+                  class="p-6 bg-background-dark border border-primary/20 rounded-lg shadow-inset-gold"
+                >
+                  <p class="text-text-light text-lg font-medium leading-normal">
+                    Software Developer Intern, Vidrona (UK)
+                  </p>
+                  <p
+                    class="text-text-light/60 text-base font-normal leading-normal mt-1"
+                  >
+                    June 2024 – May 2025
+                  </p>
+                  <ul
+                    class="list-disc list-inside text-text-light/80 text-base leading-relaxed mt-3 space-y-2"
+                  >
+                    <li>
+                      Developed predictive maintenance dashboards and asset
+                      analytics tools for energy networks.
+                    </li>
+                    <li>
+                      Built real-time fault detection modules and performance
+                      metrics visualizations using React.
+                    </li>
+                    <li>
+                      Collaborated with data engineers to design robust backend
+                      APIs and improve system reliability.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >school</span
+                  >
+                </div>
+              </div>
+              <div>
+                <div
+                  class="p-6 bg-background-dark border border-primary/20 rounded-lg shadow-inset-gold"
+                >
+                  <p class="text-text-light text-lg font-medium leading-normal">
+                    B.Tech in Information Technology, Vellore Institute of
+                    Technology
+                  </p>
+                  <p
+                    class="text-text-light/60 text-base font-normal leading-normal mt-1"
+                  >
+                    Graduated – 2025
+                  </p>
+                  <ul
+                    class="list-disc list-inside text-text-light/80 text-base leading-relaxed mt-3 space-y-2"
+                  >
+                    <li>
+                      Specialized in full-stack web development and cloud
+                      computing.
+                    </li>
+                    <li>
+                      Led multiple academic and hackathon projects involving AI
+                      integration and data visualization.
+                    </li>
+                    <li>
+                      Completed coursework focused on scalable system design and
+                      machine learning fundamentals.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+        <section id="projects" class="py-10">
+          <h2
+            class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide text-center"
+          >
+            Projects
+          </h2>
+          <hr class="border-primary/20 my-6 mx-auto w-3/4" />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a
+              href="https://github.com/KNVSDIWAKAR/JobMatchingPortal.git"
+              target="_blank"
+              class="group relative rounded-xl overflow-hidden bg-background-dark border border-primary/20 transition-all duration-500 hover:shadow-glow-gold"
+            >
+              <img
+                src="./assets/Job-Matching-Portal.png"
+                alt="Job Matching Portal"
+                class="w-full aspect-video md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-60 transition-opacity duration-500"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500"
+              >
+                <div
+                  class="w-14 h-14 flex items-center justify-center bg-primary/90 text-background-dark rounded-full shadow-lg"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >visibility</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 bg-background-dark text-center">
+                <h3 class="text-text-light text-lg font-semibold">
+                  Job Matching Portal
+                </h3>
+                <p class="text-text-light/70 text-sm mt-1">AI Resume Matcher</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/KNVSDIWAKAR/PersonalFinanceTracker.git"
+              target="_blank"
+              class="group relative rounded-xl overflow-hidden bg-background-dark border border-primary/20 transition-all duration-500 hover:shadow-glow-gold"
+            >
+              <img
+                src="./assets/Personal-Finance-Tracker.png"
+                alt="Personal Finance Tracker"
+                class="w-full aspect-video md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-60 transition-opacity duration-500"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500"
+              >
+                <div
+                  class="w-14 h-14 flex items-center justify-center bg-primary/90 text-background-dark rounded-full shadow-lg"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >visibility</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 bg-background-dark text-center">
+                <h3 class="text-text-light text-lg font-semibold">
+                  Personal Finance Tracker
+                </h3>
+                <p class="text-text-light/70 text-sm mt-1">
+                  Visualize & Plan EMIs
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/KNVSDIWAKAR/Crowd-Funding-Platform.git"
+              target="_blank"
+              class="group relative rounded-xl overflow-hidden bg-background-dark border border-primary/20 transition-all duration-500 hover:shadow-glow-gold"
+            >
+              <img
+                src="./assets/Crowd-Funding-Platform.png"
+                alt="Crowd Funding Platform"
+                class="w-full aspect-video md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-60 transition-opacity duration-500"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500"
+              >
+                <div
+                  class="w-14 h-14 flex items-center justify-center bg-primary/90 text-background-dark rounded-full shadow-lg"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >visibility</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 bg-background-dark text-center">
+                <h3 class="text-text-light text-lg font-semibold">
+                  Crowd Funding Platform
+                </h3>
+                <p class="text-text-light/70 text-sm mt-1">
+                  Microservice Donation App
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/KNVSDIWAKAR/IChat.git"
+              target="_blank"
+              class="group relative rounded-xl overflow-hidden bg-background-dark border border-primary/20 transition-all duration-500 hover:shadow-glow-gold"
+            >
+              <img
+                src="./assets/IChat.png"
+                alt="IChat"
+                class="w-full aspect-video md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-60 transition-opacity duration-500"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500"
+              >
+                <div
+                  class="w-14 h-14 flex items-center justify-center bg-primary/90 text-background-dark rounded-full shadow-lg"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >visibility</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 bg-background-dark text-center">
+                <h3 class="text-text-light text-lg font-semibold">IChat</h3>
+                <p class="text-text-light/70 text-sm mt-1">
+                  RT Chat & Voice Platform
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/KNVSDIWAKAR/Prodo.git"
+              target="_blank"
+              class="group relative rounded-xl overflow-hidden bg-background-dark border border-primary/20 transition-all duration-500 hover:shadow-glow-gold"
+            >
+              <img
+                src="./assets/Prodo.png"
+                alt="Prodo"
+                class="w-full aspect-video md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-60 transition-opacity duration-500"
+              ></div>
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500"
+              >
+                <div
+                  class="w-14 h-14 flex items-center justify-center bg-primary/90 text-background-dark rounded-full shadow-lg"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >visibility</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 bg-background-dark text-center">
+                <h3 class="text-text-light text-lg font-semibold">Prodo</h3>
+                <p class="text-text-light/70 text-sm mt-1">Perfume Webstore</p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <style>
+          .tag {
+            @apply text-xs font-medium bg-primary/80 text-background-dark px-2.5 py-1 rounded-full;
+          }
+        </style>
+        <section id="case-studies" class="py-10">
+          <h2
+            class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
+          >
+            Case Studies &amp; Design
+          </h2>
+          <hr class="border-primary/20 my-6" />
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <a
+              href="https://www.figma.com/design/gOHXAOMuEJf5gr1ylfDYzX/UI-Idea-Designs?node-id=0-1&t=bgALMiAQIrL8DuV8-1"
+              target="_blank"
+              class="group block bg-background-dark/60 border border-primary/10 rounded-2xl overflow-hidden hover:shadow-glow-gold transition-all duration-500"
+            >
+              <img
+                src="./assets/Design-Ideas.jpg"
+                alt="Design Ideas"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="p-6">
+                <p class="text-text-light/70 text-sm">Design • Aug 01 2025</p>
+                <h3 class="text-text-light text-xl font-bold mt-1">
+                  Design Ideas
+                </h3>
+                <p class="text-text-light/80 mt-2 leading-relaxed">
+                  Take a look at my design ideas, focused on elegant UX and
+                  refined user flow.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://knvsdiwakar.github.io/Taxi-Case-Study"
+              target="_blank"
+              class="group block bg-background-dark/60 border border-primary/10 rounded-2xl overflow-hidden hover:shadow-glow-gold transition-all duration-500"
+            >
+              <img
+                src="./assets/Case-Study-For-Taxis.jpg"
+                alt="Case Study For Taxis"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="p-6">
+                <p class="text-text-light/70 text-sm">Design • Feb 23 2022</p>
+                <h3 class="text-primary text-xl font-bold mt-1">
+                  Case Study for Taxis
+                </h3>
+                <p class="text-text-light/80 mt-2 leading-relaxed">
+                  How might we create an all-in-one taxi &amp; delivery app that
+                  offers a commission-free model.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://www.figma.com/design/457LPVgKO205pKIRVs6vPz/Clones?node-id=0-1&t=MMi769mb6qVWxXoj-1"
+              target="_blank"
+              class="group block bg-background-dark/60 border border-primary/10 rounded-2xl overflow-hidden hover:shadow-glow-gold transition-all duration-500"
+            >
+              <img
+                src="./assets/Clones.jpg"
+                alt="Clones"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="p-6">
+                <p class="text-text-light/70 text-sm">Design • Nov 18 2023</p>
+                <h3 class="text-text-light text-xl font-bold mt-1">Clones</h3>
+                <p class="text-text-light/80 mt-2 leading-relaxed">
+                  Youtube and Apple websites clone with modern UI patterns and
+                  color schemes.
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://www.figma.com/design/XL8OHaY3SusvD7NcHUrxkD/ChatApp?t=MMi769mb6qVWxXoj-1"
+              target="_blank"
+              class="group block bg-background-dark/60 border border-primary/10 rounded-2xl overflow-hidden hover:shadow-glow-gold transition-all duration-500"
+            >
+              <img
+                src="./assets/Chat-App.png"
+                alt="Chat App"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="p-6">
+                <p class="text-text-light/70 text-sm">Design • Oct 12 2024</p>
+                <h3 class="text-primary text-xl font-bold mt-1">Chat App</h3>
+                <p class="text-text-light/80 mt-2 leading-relaxed">
+                  Design plan for a real-time chat platform with modern UI
+                  elements and clean typography.
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <section id="contact">
+          <h2
+            class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
+          >
+            Get In Touch
+          </h2>
+          <hr class="border-primary/20 my-6" />
+          <p
+            class="text-text-light text-base sm:text-lg font-normal leading-relaxed max-w-3xl mb-8"
+          >
+            Have a project in mind or just want to say hello? Feel free to reach
+            out. I'm always open to discussing new ideas and opportunities.
+          </p>
+          <form id="contactForm" class="max-w-3xl space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="sr-only" for="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  class="w-full bg-black/30 border border-primary/30 rounded-lg px-4 py-3 text-text-light placeholder-text-light/50 transition duration-300 focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                  class="w-full bg-black/30 border border-primary/30 rounded-lg px-4 py-3 text-text-light placeholder-text-light/50 transition duration-300 focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="sr-only" for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+                class="w-full bg-black/30 border border-primary/30 rounded-lg px-4 py-3 text-text-light placeholder-text-light/50 transition duration-300 focus:ring-2 focus:ring-primary focus:border-primary"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                id="sendBtn"
+                type="submit"
+                class="inline-block bg-primary text-background-dark font-bold text-sm px-8 py-3.5 rounded-lg transition-all duration-300 hover:bg-gradient-to-r from-primary to-[#EACD65] hover:shadow-glow-gold"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+
+          <script>
+            (function () {
+              const recipient = "you@yourdomain.com";
+              const form = document.getElementById("contactForm");
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+                const subject = `Website inquiry from ${
+                  name || "Website Visitor"
+                }`;
+                const bodyLines = [
+                  `Name: ${name}`,
+                  `Email: ${email}`,
+                  "",
+                  "Message:",
+                  message,
+                ];
+                const body = encodeURIComponent(bodyLines.join("\n"));
+                const mailto = `mailto:${encodeURIComponent(
+                  recipient
+                )}?subject=${encodeURIComponent(subject)}&body=${body}`;
+                window.location.href = mailto;
+              });
+            })();
+          </script>
+        </section>
+      </main>
+    </div>
+    <script>
+      document.documentElement.style.scrollBehavior = "smooth";
+      const sectionIds = [
+        "about",
+        "resume",
+        "projects",
+        "case-studies",
+        "contact",
+      ];
+      const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+      const navLinks = Array.from(
+        document.querySelectorAll("aside nav a")
+      ).filter(
+        (a) => a.getAttribute("href") && a.getAttribute("href").startsWith("#")
+      );
+      function setActiveLink(id) {
+        navLinks.forEach((a) => {
+          const href = a.getAttribute("href").slice(1);
+          if (href === id) {
+            a.classList.add("bg-primary/10", "text-primary");
+            a.setAttribute("aria-current", "true");
+          } else {
+            a.classList.remove("bg-primary/10", "text-primary");
+            a.removeAttribute("aria-current");
+          }
+        });
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          let visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible && visible.target && visible.target.id) {
+            setActiveLink(visible.target.id);
+          }
+        },
+        {
+          threshold: [0.25, 0.5, 0.75],
+          root: null,
+          rootMargin: "-40% 0px -40% 0px",
+        }
+      );
+      sections.forEach((s) => io.observe(s));
+      window.addEventListener("load", () => {
+        const inView = sections.find((s) => {
+          const rect = s.getBoundingClientRect();
+          return rect.top < window.innerHeight * 0.6 && rect.bottom > 40;
+        });
+        setActiveLink(inView ? inView.id : "about");
+      });
+      navLinks.forEach((a) =>
+        a.addEventListener("click", (e) => {
+          const id = a.getAttribute("href").slice(1);
+          setActiveLink(id);
+        })
+      );
+    </script>
+  </body>
+</html>
