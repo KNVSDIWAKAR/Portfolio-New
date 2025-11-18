@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Diwakar Kancherla - Full Stack Developer</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -54,7 +53,8 @@
   <body class="bg-background-dark font-sans text-text-light/80">
     <div class="relative flex min-h-screen w-full flex-col lg:flex-row">
       <aside
-        class="w-full lg:w-[320px] lg:flex-shrink-0 lg:h-screen lg:sticky lg:top-0 p-8 flex flex-col border-b lg:border-b-0 lg:border-r border-primary/20"
+        class="hidden lg:flex w-full lg:w-[320px] lg:flex-shrink-0 lg:h-screen lg:sticky lg:top-0 p-8 flex flex-col border-b lg:border-b-0 lg:border-r border-primary/20"
+        aria-label="Sidebar"
       >
         <div class="flex flex-col items-center text-center gap-4 flex-grow">
           <div
@@ -156,7 +156,84 @@
           </a>
         </div>
       </aside>
-      <main class="flex-1 p-8 sm:p-12 lg:p-20 space-y-20 lg:space-y-28">
+
+      <header
+        class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background-dark/95 backdrop-blur-sm border-b border-primary/10"
+        role="banner"
+      >
+        <div
+          class="max-w-[1200px] mx-auto px-4 py-3 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-3">
+            <button
+              id="mobileMenuBtn"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+            >
+              <span class="material-symbols-outlined text-2xl">menu</span>
+              <span class="sr-only">Open menu</span>
+            </button>
+            <a href="#about" class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 rounded-full bg-center bg-cover"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR1VhUnoUPNcStlSvXU-27acaNdVpmBDv9PkTbwOtlPIY_1mNPdWlE60tTGpr01ZoS2QDAA71dD8vV4LxG8lEGOg74miLVtuyF0WiYV0RCv40-IHnCE7v93CbjF761n57jgfKYdpfIv86fGl8ag2LVV00BSZB3imMx93tQopiSbPUuDwn_o7TB588iuRhOFttItWquaVzO0bnoNgc9HerlPxF4hSYc95CXXWxjBQXU0d3_od4Mymh0JprsVijTdxMH46r_8SaM0HY');
+                "
+              ></div>
+              <div class="text-sm font-medium text-text-light">Diwakar K.</div>
+            </a>
+          </div>
+          <nav class="flex items-center gap-3">
+            <a
+              class="hidden sm:inline-block text-sm px-3 py-1 rounded-md hover:text-primary"
+              href="#projects"
+              >Projects</a
+            >
+            <a
+              class="hidden sm:inline-block text-sm px-3 py-1 rounded-md hover:text-primary"
+              href="#resume"
+              >Resume</a
+            >
+            <a href="#contact" class="p-2 rounded-md hover:text-primary">
+              <span class="material-symbols-outlined">mail</span>
+            </a>
+          </nav>
+        </div>
+        <div id="mobileMenu" class="hidden border-t border-primary/10">
+          <div class="px-4 pb-4 pt-3 space-y-2">
+            <a
+              class="block px-3 py-2 rounded-lg text-text-light/80 hover:bg-primary/10 hover:text-primary"
+              href="#about"
+              >About</a
+            >
+            <a
+              class="block px-3 py-2 rounded-lg text-text-light/80 hover:bg-primary/10 hover:text-primary"
+              href="#resume"
+              >Resume</a
+            >
+            <a
+              class="block px-3 py-2 rounded-lg text-text-light/80 hover:bg-primary/10 hover:text-primary"
+              href="#projects"
+              >Projects</a
+            >
+            <a
+              class="block px-3 py-2 rounded-lg text-text-light/80 hover:bg-primary/10 hover:text-primary"
+              href="#case-studies"
+              >Case Studies</a
+            >
+            <a
+              class="block px-3 py-2 rounded-lg text-text-light/80 hover:bg-primary/10 hover:text-primary"
+              href="#contact"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main
+        class="flex-1 pt-16 lg:pt-0 p-8 sm:p-12 lg:p-20 space-y-20 lg:space-y-28"
+      >
         <section id="about">
           <h2
             class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
@@ -175,6 +252,7 @@
             that are efficient, elegant, and impactful.
           </p>
         </section>
+
         <section id="resume">
           <h2
             class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
@@ -224,6 +302,7 @@
                   </ul>
                 </div>
               </div>
+
               <div class="flex flex-col items-center">
                 <div
                   class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
@@ -264,6 +343,7 @@
                   </ul>
                 </div>
               </div>
+
               <div class="flex flex-col items-center">
                 <div
                   class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
@@ -304,6 +384,7 @@
                   </ul>
                 </div>
               </div>
+
               <div class="flex flex-col items-center">
                 <div
                   class="rounded-full bg-primary/20 p-2 ring-4 ring-primary/10"
@@ -347,10 +428,12 @@
             </div>
           </div>
         </section>
+
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
         />
+
         <section id="projects" class="py-10">
           <h2
             class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide text-center"
@@ -390,6 +473,7 @@
                 <p class="text-text-light/70 text-sm mt-1">AI Resume Matcher</p>
               </div>
             </a>
+
             <a
               href="https://github.com/KNVSDIWAKAR/PersonalFinanceTracker.git"
               target="_blank"
@@ -423,6 +507,7 @@
                 </p>
               </div>
             </a>
+
             <a
               href="https://github.com/KNVSDIWAKAR/Crowd-Funding-Platform.git"
               target="_blank"
@@ -456,6 +541,7 @@
                 </p>
               </div>
             </a>
+
             <a
               href="https://github.com/KNVSDIWAKAR/IChat.git"
               target="_blank"
@@ -487,6 +573,7 @@
                 </p>
               </div>
             </a>
+
             <a
               href="https://github.com/KNVSDIWAKAR/Prodo.git"
               target="_blank"
@@ -518,11 +605,13 @@
             </a>
           </div>
         </section>
+
         <style>
           .tag {
             @apply text-xs font-medium bg-primary/80 text-background-dark px-2.5 py-1 rounded-full;
           }
         </style>
+
         <section id="case-studies" class="py-10">
           <h2
             class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
@@ -552,6 +641,7 @@
                 </p>
               </div>
             </a>
+
             <a
               href="https://knvsdiwakar.github.io/Taxi-Case-Study"
               target="_blank"
@@ -573,6 +663,7 @@
                 </p>
               </div>
             </a>
+
             <a
               href="https://www.figma.com/design/457LPVgKO205pKIRVs6vPz/Clones?node-id=0-1&t=MMi769mb6qVWxXoj-1"
               target="_blank"
@@ -592,6 +683,7 @@
                 </p>
               </div>
             </a>
+
             <a
               href="https://www.figma.com/design/XL8OHaY3SusvD7NcHUrxkD/ChatApp?t=MMi769mb6qVWxXoj-1"
               target="_blank"
@@ -613,6 +705,7 @@
             </a>
           </div>
         </section>
+
         <section id="contact">
           <h2
             class="text-4xl sm:text-5xl font-bold font-display text-primary tracking-wide"
@@ -703,6 +796,7 @@
         </section>
       </main>
     </div>
+
     <script>
       document.documentElement.style.scrollBehavior = "smooth";
       const sectionIds = [
@@ -755,12 +849,48 @@
         });
         setActiveLink(inView ? inView.id : "about");
       });
+
       navLinks.forEach((a) =>
         a.addEventListener("click", (e) => {
           const id = a.getAttribute("href").slice(1);
           setActiveLink(id);
         })
       );
+
+      const mobileBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      function toggleMobileMenu() {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        if (isHidden) {
+          mobileMenu.classList.remove("hidden");
+          mobileBtn.setAttribute("aria-expanded", "true");
+        } else {
+          mobileMenu.classList.add("hidden");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        }
+      }
+      mobileBtn.addEventListener("click", function () {
+        toggleMobileMenu();
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          mobileBtn.setAttribute("aria-expanded", "false");
+          const id = a.getAttribute("href")?.slice(1);
+          if (id) setActiveLink(id);
+        });
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          mobileMenu.classList.add("hidden");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+      document
+        .querySelectorAll("header nav a, aside nav a, #mobileMenu a")
+        .forEach((link) => {
+          link.addEventListener("click", (ev) => {});
+        });
     </script>
   </body>
 </html>
